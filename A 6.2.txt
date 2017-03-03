@@ -1,0 +1,104 @@
+Give brief answers to the questions below:
+
+1. Why MapReduce program is needed in Pig Programming?
+
+	*MapReduce program is needed if the job requires the optimization at particular stage of processing.
+     	*It is required when  the job has some tricky usage of cross products,distributed cache, joins.
+    	*Hadoop developers should use MapReduce when a good amount of testability is required
+     		for combining lots of large data sets  
+    	*It is required when the hadoop developers need a definite driver program control .
+
+
+
+2. What are advantages of Pig over MapReduce?
+
+	#Development is much faster in Pig because Pig requires only fewer lines of code.
+	#Pig provides inbuilt optimization for MR jobs whereas in map reduce developer needs
+	     to take care of optimization.
+	#Pig is easier to read ie. the content is self evident.
+	#Higher level of abstraction makes Pig easier to learn and read.
+	#A 500 lines of code in Java can be written in 25 lines of cade in Pig.
+	#In Pig we dont have to worry about version mismatch.
+	#We can have multiple Pig client libraries installed at once.
+
+3. What is Pig engine and what is its importance?
+
+          PIG ENGINE:
+	In order to write data analysis programs,we use a high level language known as Pig Latin.
+	Hence the programs will be written in Pig Latin language.
+	These programs which are written in pig latin must ne converted to Map and Reduce tasks.
+	The component that is used for this conversion purpose is known as Pig  Engine.
+     
+          IMPORTANCE:
+	#Pig engine does the work of parsing, optimising, and executing PigLatin scripts into a
+	 series of MapReduce jobs on a Hadoop cluster.
+	#It creates an environment that does executes pig into map reduce jobs in a parallel manner.
+
+4. What are the modes of Pig execution?
+	
+           There are two kinds of modes of execution in Pig, they include:
+	
+	1.Local mode
+	2.MapReduce mode
+	
+	LOCAL MODE:
+		a)The Pig local mode is best suitable for smaller data sets.
+		b)In this mode, the Pig runs on a single JVM.
+		C)In the local mode of execution , all the input data will be taken from a single file system.
+		d)After the execution is done the output is put on the top of the local file system.
+		e)The following command is used,to start the local mode of execution, .   
+			# pig -x local 
+
+	MAPREDUCE MODE:
+		a)In this mode the Pig will take input from HDFS paths only.
+		b)After execution it will put the output files on top of the HDFS.
+		C)Pig will translate into map reduce jobs and put them in the hadoop cluster. 
+		d)Pig statements like LOAD and STORE are used for processing. 
+
+5. What is Grunt Shell in Pig?
+
+	#The grunt shell in Pig is used to write scripts using Pig latin.
+     	#It is used to run the Pig in the shell after invoking the Grunt Shell.
+      	#There are also useful shell and utility commands provided by the grunt shell.
+     	#Grunt can be used interactive shell as well as in batch mode.The supported commands
+       	     of Grunt  includes DFS commands, pig commands as well as a  others.
+
+6. What are the features of Pig Latin language?
+	
+     #Pig Latin language provides all of the standard data-processing operations.
+     #It is case sensitive.
+     #It is extensible.We can create our own functions for doing special processing
+     #Ease of Programming:Complex tasks with multiple interrelated data transformations are
+      explicitly encoded as data flow sequences,thus  making them easy to write, understand, and maintain.
+     #It has Optimization Oppurtunities.The way of task encoding permits the system to optimize the
+     execution automatically and thus enables the user to focus on semantics.
+
+
+
+7. Is Pig Latin commands case sensitive?
+	
+	No, Pig Latin commands are not case sensitive.
+	EXAMPLE:STORE is the same as store.
+	UDF names are not case sensitive.
+	MAX is not the same as the UDF max.
+
+8. What is a data flow language? 
+
+	#Dataflow programming models contrast to the control flow model implemented 
+	  in languages such as C.
+
+	#Because of the top-down sequential programming approach, applications written in C 
+	 have inherent limitations when mapping to parallel hardware. 
+
+	#In contrast, with a dataflow model, nodes on a block diagram are connected to one
+	  another to express the logical execution flow, and they can be used to easily express 
+	 parallelism. 
+
+	#When a block diagram node receives all required inputs, it produces output data and
+	 passes that data to the next node in the dataflow path. 
+	
+	#The movement of data through the nodes determines the execution order of the functions
+	 on the block diagram.
+		example: Pig 
+
+	
